@@ -5,50 +5,90 @@ const Daemon = require('../src/Daemon.js');
 const Undead = require('../src/Undead.js');
 const Zombie = require('../src/Zombie.js');
 
-test('Bowerman', () => {
+test('Верно создается объект Bowerman', () => {
   const result = new Bowerman('Legolas');
 
-  expect(result).toEqual({
+  const correct = {
     name: 'Legolas',
     type: 'Bowerman',
     health: 100,
     level: 1,
     attack: 25,
     defence: 25,
-  });
+  };
+  
+  expect(result).toEqual(correct);
 });
 
-test('Swordsman', () => {
+test('Верно создается объект Swordsman', () => {
   const result = new Swordsman('Aragorn');
 
-  expect(result.attack).toBe(40);
-  expect(result.defence).toBe(10);
+  const correct = {
+    name: 'Aragorn',
+    type: 'Swordsman',
+    health: 100,
+    level: 1,
+    attack: 40,
+    defence: 10,
+  };
+  
+  expect(result).toEqual(correct);
 });
 
-test('Magician', () => {
+test('Верно создается объект Magician', () => {
   const result = new Magician('Gandalf');
 
-  expect(result.attack).toBe(10);
-  expect(result.defence).toBe(40);
+  const correct = {
+    name: 'Gandalf',
+    type: 'Magician',
+    health: 100,
+    level: 1,
+    attack: 10,
+    defence: 40,
+  };
+  
+  expect(result).toEqual(correct);
 });
 
-test('Daemon', () => {
+test('Верно создается объект Daemon', () => {
   const result = new Daemon('Azazel');
 
-  expect(result.attack).toBe(10);
-  expect(result.defence).toBe(40);
+  const correct = {
+    name: 'Azazel',
+    type: 'Daemon',
+    health: 100,
+    level: 1,
+    attack: 10,
+    defence: 40,
+  };
+  
+  expect(result).toEqual(correct);
 });
-
-test('Undead', () => {
+test('Верно создается объект Undead', () => {
   const result = new Undead('Skeleton');
 
-  expect(result.attack).toBe(25);
-  expect(result.defence).toBe(25);
+  const correct = {
+    name: 'Skeleton',
+    type: 'Undead',
+    health: 100,
+    level: 1,
+    attack: 25,
+    defence: 25,
+  };
+  
+  expect(result).toEqual(correct);
 });
-
-test('Zombie', () => {
+test('Верно создается объект Zombie', () => {
   const result = new Zombie('Walker');
 
-  expect(result.attack).toBe(40);
-  expect(result.defence).toBe(10);
+  const correct = {
+    name: 'Walker',
+    type: 'Zombie',
+    health: 100,
+    level: 1,
+    attack: 40,
+    defence: 10,
+  };
+  
+  expect(result).toEqual(correct);
 });
